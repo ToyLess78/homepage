@@ -25,6 +25,20 @@ body {
     margin: 0 auto;
 }
 
+.contact-info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.25rem;
+    margin: 0 -1.9rem;
+}
+
+.aside-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
 .aside-info-container li {
     line-height: 1.5;
 }
@@ -50,6 +64,53 @@ body {
     padding-bottom: 1.9rem;
 }
 
+.contact-info-header {
+    color: var(--primary-white);
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+
+.contact-info-title {
+    font-size: 2.5rem;
+}
+
+.contact-info-sub-title {
+    font-size: 1rem;
+}
+
+.aside-info-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.left-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    padding: .6rem 0 .6rem 1.9rem;
+    background: linear-gradient(to right, var(--accent) 93%, transparent 93%, transparent 100%);
+}
+
+.right-items {
+    padding: 1.25rem 3.1rem 1.25rem 0;
+    background: linear-gradient(to left, var(--accent) 1.9rem, transparent 1.9rem, transparent 100%);
+}
+
+.contact-info-item,
+.aside-info-item {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    display: flex;
+    justify-content: start;
+}
+
+.certifications-info-item {
+    list-style: none;
+}
+
 .certifications-info-item span {
     flex: 1 1 auto;
     text-align: left;
@@ -69,21 +130,177 @@ body {
     color: var(--secondary-gray);
 }
 
+.contact-info-item {
+    border-bottom: 1px solid var(--secondary-gray);;
+    line-height: 1.6;
+}
+
 .footer-content {
     margin-top: -1rem;
+}
+
+.footer-content .contact-info-item {
+    border-bottom: none;
 }
 
 .certification-info-item small {
     text-align: center;
 }
 
+.contact-info-item:not(:last-child) {
+    margin-bottom: .6rem;
+}
+
+.contact-info-icon-wrapper {
+    margin-right: .6rem;
+    width: 1.25rem;
+    display: flex;
+    justify-content: center;
+}
 
 .contact-info-item-icon path {
     fill: var(--accent);
 }
 
+.contact-info-item-icon {
+    height: 1.1rem;
+    vertical-align: text-bottom;
+}
+
+.contact-info-avatar {
+    border-radius: 50%;
+    width: 6.9rem;
+    height: 6.9rem;
+    object-fit: cover;
+    padding: 3px;
+    border: 1px solid var(--secondary-gray);
+    filter: grayscale(55%);
+}
+
+.footer-contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.9rem;
+}
+
 .hide-title {
     display: none;
+}
+
+.intro-icon-wrapper {
+    margin-right: 1rem;
+    width: 1rem;
+    float: left;
+}
+
+.intro-icon {
+    height: 1rem;
+    vertical-align: text-bottom;
+}
+
+.intro-icon path {
+    fill: var(--accent);
+}
+
+.intro-text,
+.advancement-timeline .advancement-timeline-event {
+    text-align: justify;
+}
+
+.advancement {
+    flex: 1 1 60%;
+}
+
+.advancement-list-container {
+    padding-left: 3.75rem;
+}
+
+.block-title {
+    display: flex;
+    flex-grow: 1;
+    margin-bottom: .6rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, var(--accent) 0%, var(--accent) 3rem, #e5e5e5 3rem, #e5e5e5 100%);
+    letter-spacing: .3rem;
+    font-size: 1.1rem;
+}
+
+.advancement-timeline {
+    border-left: 1px solid var(--secondary-gray);
+    margin: 1.25rem auto;
+    position: relative;
+    padding-left: 1.25rem;
+    list-style: none;
+    text-align: left;
+    max-width: 80%;
+}
+
+.advancement-timeline .advancement-timeline-event {
+    position: relative;
+}
+
+.advancement-timeline-event:not(:last-child) {
+    padding-bottom: 15px;
+}
+
+.advancement-timeline .advancement-timeline-event::before,
+.advancement-timeline .advancement-timeline-event::after {
+    position: absolute;
+    display: block;
+    top: 0;
+}
+
+.advancement-timeline .advancement-timeline-event::before {
+    left: -130px;
+    color: var(--secondary-gray);;
+    content: attr(data-date);
+    font-size: .8rem;
+    letter-spacing: .05rem;
+    padding-top: .3rem;
+}
+
+.advancement-timeline .advancement-timeline-event::after {
+    box-shadow: 0 0 0 1px var(--secondary-gray);
+    left: -1.5rem;
+    background: var(--primary-white);
+    border-radius: 50%;
+    height: .4rem;
+    width: .4rem;
+    content: "";
+    top: 2px;
+}
+
+.advancement-timeline .advancement-timeline-list {
+    list-style-type: "-  ";
+    padding-left: 1rem;
+    font-size: .95rem;
+}
+
+.advancement-timeline .advancement-timeline-link,
+.advancement-timeline .advancement-timeline-link:visited {
+    color: var(--secondary-gray);
+}
+
+.advancement-timeline .advancement-timeline-link::after {
+    padding-left: .2rem;
+    content: url(data:image/svg+xml,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M10.5833%207.38889V11.2222C10.5833%2011.5611%2010.4487%2011.8861%2010.2091%2012.1257C9.96945%2012.3654%209.64444%2012.5%209.30556%2012.5H2.27778C1.93889%2012.5%201.61388%2012.3654%201.37425%2012.1257C1.13462%2011.8861%201%2011.5611%201%2011.2222V4.19444C1%203.85556%201.13462%203.53055%201.37425%203.29092C1.61388%203.05129%201.93889%202.91667%202.27778%202.91667H6.11111M8.66667%201H12.5M12.5%201V4.83333M12.5%201L5.47222%208.02778%22%20stroke%3D%22%23CCCCCC%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E%0A);
+}
+
+.aside-info-item .languages {
+    flex-grow: 1;
+    text-align: left;
+    display: flex;
+    line-height: 1.7;
+}
+
+.aside-info-item .languages::after {
+    content: "";
+    border-bottom: 2px dotted var(--secondary-gray);
+    flex: 1;
+    margin: .6rem;
 }
 
 @media screen and (width <= 576px) {
@@ -99,4 +316,26 @@ body {
         padding-bottom: 1.25rem;
     }
 
+    .main-info,
+    .contact-info-container,
+    .aside-info-container {
+        flex-direction: column;
+    }
+
+    .right-items {
+        padding: 0 1.9rem;
+        background: transparent;
+    }
+
+    .advancement {
+        margin-right: 0;
+    }
+
+    .contact-info-item {
+        justify-content: center;
+    }
+
+    .aside-info-block {
+        margin-bottom: 1.25rem;
+    }
 }
